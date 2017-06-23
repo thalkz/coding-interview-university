@@ -220,10 +220,7 @@ You can see my code here:
 
 ## Data Structures
 
-- ### Arrays
-
->>> Done in Java
-
+- ### Arrays (Done in Java)
     - Implement an automatically resizing vector.
     - [X] Description:
         - [Arrays (video)](https://www.coursera.org/learn/data-structures/lecture/OsBSF/arrays)
