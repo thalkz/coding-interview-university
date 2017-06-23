@@ -96,6 +96,25 @@ public class Vector {
     }
   }
 
+  public void remove(int item) {
+    int index = 0;
+    while(index != -1){
+      index = find(item);
+      if(index != -1) {
+        delete(index);
+      }
+    }
+  }
+
+  public int find(int item) {
+    for(int i = 0; i < size; i++) {
+      if(item == array[i]){
+        return i;
+      }
+    }
+    return -1;
+  }
+
   private void ech(int i, int j) {
     int temp = array[i];
     array[i] = array[j];
@@ -139,6 +158,12 @@ public class Vector {
 
     v.delete(3);
     System.out.println("Delete 3rd item");
+    System.out.println(v.toString());
+    System.out.println("Item 100 is at index : " + v.find(100));
+
+    v.prepend(100);
+    v.insert(2, 100);
+    v.remove(100);
     System.out.println(v.toString());
   }
 }
