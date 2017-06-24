@@ -84,10 +84,13 @@ public class Vector {
 
   public int delete(int index) {
     if(index >= 0 && index < size) {
-      int deleted = array [index];
+      int deleted = array[index];
       array[index] = 0;
       for(int i = index; i < size; i++) {
         ech(i, i + 1);
+      }
+      if(size <= array.length / 4 && array.length >= MIN_CAPACITY * 2) {
+        resize(array.length / 2);
       }
       size--;
       return deleted;
