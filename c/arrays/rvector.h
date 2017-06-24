@@ -8,9 +8,14 @@ typedef struct
   int *data;
 } RVector;
 
+RVector *rvector_new(int capacity);
+
+void rvector_destroy(RVector *v);
+
 void print_vector(RVector *v);
 
-RVector *rvector_new(int capacity);
-void rvector_destroy(RVector *v);
+void rvector_push(RVector *v, int item);
+
+void rvector_resize(RVector *v, int new_capacity);
 
 #endif
